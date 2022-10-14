@@ -62,7 +62,6 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
 
-
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
