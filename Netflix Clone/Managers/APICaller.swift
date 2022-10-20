@@ -19,6 +19,25 @@ enum APIError: Error {
 class APICaller {
     static let shared = APICaller()
 
+    func getPrintJsonResults(completion: @escaping (String) -> Void) {
+        guard let url = URL(string: "\(Constants.baseURL)/3/trending/movie/day?api_key=\(Constants.API_KEY)") else { return }
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else { return }
+
+            do {
+                let results = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                print(results)
+
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+
+        task.resume()
+
+
+    }
+
     func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void) { // return array of Movie as a result, and if not, return an error
         guard let url = URL(string: "\(Constants.baseURL)/3/trending/movie/day?api_key=\(Constants.API_KEY)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in

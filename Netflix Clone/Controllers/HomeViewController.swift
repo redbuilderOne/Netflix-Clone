@@ -75,10 +75,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
+            print("CollectionViewTableView Cell error")
+            return UITableViewCell()
+        }
 
         switch indexPath.section {
         case Sections.trendingMovies.rawValue:
+
+            APICaller.shared.getPrintJsonResults { result in }
 
             APICaller.shared.getTrendingMovies { result in
                 switch result {
@@ -132,7 +137,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                     print(error.localizedDescription)
                 }
             }
-
 
         default:
             return UITableViewCell()
