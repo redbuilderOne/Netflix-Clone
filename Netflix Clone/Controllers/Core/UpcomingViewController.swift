@@ -70,5 +70,4 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
         return 140
     }
 
-
 }

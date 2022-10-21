@@ -9,6 +9,7 @@ import Foundation
 
 extension String {
     func capitalizeFirstLetter() -> String {
-        return self.prefix(1).uppercased() + self.lowercased().dropFirst() // choosing first letter, convering it to an uppercased and the rest is goind to be lowercased, dropFirst no to have multiple letters
+        return self.prefix(1).uppercased() + self.lowercased().dropFirst()
+        // HINT: choosing first letter, convering it to an uppercased and the rest is goind to be lowercased, dropFirst no to have multiple letters
     }
 }

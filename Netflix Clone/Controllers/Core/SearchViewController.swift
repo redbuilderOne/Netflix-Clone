@@ -87,7 +87,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         return 120
     }
 
-
 }
 
 extension SearchViewController: UISearchResultsUpdating {
