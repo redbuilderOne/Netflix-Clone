@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .systemBackground
         view.addSubview(homeFeedTable)
         homeFeedTable.delegate = self
@@ -42,6 +43,7 @@ class HomeViewController: UIViewController {
 
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
         homeFeedTable.tableHeaderView = headerView
+
     }
 
     private func configureNavBar() {
@@ -79,6 +81,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             print("CollectionViewTableView Cell error")
             return UITableViewCell()
         }
+
+        cell.delegate? = self
 
         switch indexPath.section {
         case Sections.trendingMovies.rawValue:
@@ -170,6 +174,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionTitles[section]
+    }
+
+}
+
+extension HomeViewController: CollectionViewTableViewCellDelegate {
+    func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
+
+        DispatchQueue.main.async { [weak self] in
+            let viewController = TitlePreviewViewController()
+            viewController.configure(with: viewModel)
+            self?.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 
 }
