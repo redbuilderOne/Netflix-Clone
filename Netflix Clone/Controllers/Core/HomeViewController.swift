@@ -82,7 +82,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        cell.delegate? = self
+        cell.delegate = self
 
         switch indexPath.section {
         case Sections.trendingMovies.rawValue:

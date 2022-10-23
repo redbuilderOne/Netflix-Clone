@@ -81,7 +81,6 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
             switch result {
             case .success(let videoElement):
 
-
                 let title = self?.titles[indexPath.row]
                 guard let titleOverview = title?.overview else { return }
                 guard let strongSelf = self else { return }
