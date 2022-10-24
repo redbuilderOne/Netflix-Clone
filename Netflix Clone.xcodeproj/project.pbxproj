@@ -75,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				FFECA25928F4641500FC11B9 /* HomeViewController.swift */,
-				FF95F90B2905962100FA4E77 /* TitlePreviewViewController.swift */,
 				FFECA25B28F4643400FC11B9 /* UpcomingViewController.swift */,
 				FFECA25D28F4644B00FC11B9 /* SearchViewController.swift */,
 				FFECA25F28F4646700FC11B9 /* DownloadsViewController.swift */,
@@ -87,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				FF95F90329018E9100FA4E77 /* SearchResultsViewController.swift */,
+				FF95F90B2905962100FA4E77 /* TitlePreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -190,7 +190,6 @@
 				FFECA23D28F4626A00FC11B9 /* Sources */,
 				FFECA23E28F4626A00FC11B9 /* Frameworks */,
 				FFECA23F28F4626A00FC11B9 /* Resources */,
-				FF95F9082902C8FC00FA4E77 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -252,27 +251,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FF95F9082902C8FC00FA4E77 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFECA23D28F4626A00FC11B9 /* Sources */ = {
