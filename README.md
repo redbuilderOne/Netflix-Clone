@@ -4,7 +4,7 @@ Portfolio App Netflix Clone
 I've made this clone app using:
 - UIKit
 - CoreData
-- SDWebImage
+- SDWebImage API
 - themoviedb API
 - google youtube search API
 
