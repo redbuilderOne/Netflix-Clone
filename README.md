@@ -5,7 +5,7 @@ I've made this clone app using:
 - UIKit (programmatically)
 - CoreData
 - SDWebImage API
-- themoviedb API (works with VPN)
+- themoviedb API (may not work without VPN)
 - google youtube search API
 
 ## GIF Preview:
