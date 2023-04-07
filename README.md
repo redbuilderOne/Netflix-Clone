@@ -2,7 +2,7 @@
 Portfolio App Netflix Clone 
 
 I've made this clone app using:
-- UIKit
+- UIKit (programmatically)
 - CoreData
 - SDWebImage API
 - themoviedb API
